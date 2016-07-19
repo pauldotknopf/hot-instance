@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/pauldotknopf/hot-instance/issues"
   },
-  "homepage": "https://github.com/pauldotknopf/hot-instance#readme"
+  "homepage": "https://github.com/pauldotknopf/hot-instance#readme",
+  "dependencies": {
+    "chokidar": "^1.6.0",
+    "express": "^4.14.0",
+    "require-reload": "^0.2.2"
+  }
 }
