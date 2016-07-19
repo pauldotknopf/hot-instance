@@ -1,0 +1,19 @@
+{
+  "name": "hot-instance",
+  "version": "1.0.0",
+  "description": "Live updating of a javascript file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauldotknopf/hot-instance.git"
+  },
+  "author": "Paul Knopf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pauldotknopf/hot-instance/issues"
+  },
+  "homepage": "https://github.com/pauldotknopf/hot-instance#readme"
+}
