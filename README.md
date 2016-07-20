@@ -1,4 +1,7 @@
 # hot-instance
+
+[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
+
 > A helper library to keep a js file "hot" by watching the file for changes.
 
 ## A quick demo
@@ -40,3 +43,8 @@ app.listen(3000, function () {
 ### ```LiveInstance```
 #### ```instance``` - This is the actual exported contents of your hot file. This will be auto-updated as your file changes. If the file you are watching is deleted, it will be ```null```. It will continue watching for the file to re-appear.
 #### ```exists``` - A ```bool``` that indicates if the file you are watching currently exists. If the file you are watching becomes deleted, this will be ```false```, and ```instance``` will be ```null```.
+
+[npm-image]: https://badge.fury.io/js/hot-instance.svg
+[npm-url]: https://npmjs.org/package/hot-instance
+[daviddm-image]: https://david-dm.org/pauldotknopf/hot-instance.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/pauldotknopf/hot-instance
