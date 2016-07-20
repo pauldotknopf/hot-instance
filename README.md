@@ -4,6 +4,8 @@
 
 > A helper library to keep a js file "hot" by watching the file for changes.
 
+```npm install hot-instance```
+
 ## A quick demo
 
 **```live.js```**
