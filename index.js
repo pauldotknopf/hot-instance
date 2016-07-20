@@ -5,21 +5,18 @@ var reload = require('require-reload')(require);
 function LiveInstance(module) {
 
   this.module = module;
-  this.moduleLocation = require.resolve(module);
 
-  if(!fs.existsSync(this.moduleLocation)) {
+  if(!fs.existsSync(this.module)) {
     this.exists = false;
-    this.error = 'No module could be found for ' + module + '.';
-    return;
   } else {
-    this.instance = require(this.moduleLocation);
+    this.instance = require(this.module);
     this.exists = true;
   }
 
   // start watching the file
-  this.watcher = chokidar.watch(this.moduleLocation)
+  this.watcher = chokidar.watch(this.module)
     .on('add', (event, path) => {
-      this.instance = reload(this.moduleLocation);
+      this.instance = reload(this.module);
       this.exists = true;
     })
     .on('unlink', (event, path) => {
@@ -27,7 +24,7 @@ function LiveInstance(module) {
       this.instance = null;
     })
     .on('change', (event, path) => {
-      this.instance = reload(this.moduleLocation);
+      this.instance = reload(this.module);
       this.exists = true;
     });
 }

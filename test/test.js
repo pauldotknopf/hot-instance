@@ -1,9 +1,11 @@
 var express = require('express');
 var app = express();
-var liveInstance = require('../index.js')(require.resolve('./live'));
+var hotInstance = require('../index.js');
+
+var testJsFile = hotInstance(require.resolve('./live'));
 
 app.get('/', function (req, res) {
-  res.send(liveInstance.instance());
+  res.send(testJsFile.instance());
 });
 
 app.listen(3000, function () {
